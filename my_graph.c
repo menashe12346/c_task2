@@ -1,12 +1,10 @@
 #include <stdio.h>
-#include <string.h>
 #include "my_mat.h"
 
 #define ROWS 10
 #define COLS 10
 
 int main() {
-    printf("HI");
 
     int Array[ROWS][COLS];
     char c = ' ';
@@ -21,11 +19,11 @@ int main() {
         } else if (c == 'B') {
             scanf("%d", &i);
             scanf("%d", &j);
-            printf("%d", B(i, j, Array));  
-        } else if (c == 'C') {
+            printf("%s\n", B(i, j, Array) == 1 ? "TRUE" : "FALSE");        
+            } else if (c == 'C') {
             scanf("%d", &i);
             scanf("%d", &j);
-            printf("%d", C(i, j, Array));
+            printf("%d\n", C(i, j, Array));
         }
     }
 

@@ -35,6 +35,6 @@ int B(int row, int col, int Array[ROWS][COLS]){
 }
 
 int C(int row, int col, int Array[ROWS][COLS]){
-    return Array[row][col];
+    return Array[row][col]==0? -1 : Array[row][col];
 }
 
