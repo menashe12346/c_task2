@@ -19,7 +19,7 @@ int main() {
         } else if (c == 'B') {
             scanf("%d", &i);
             scanf("%d", &j);
-            printf("%s\n", B(i, j, Array) == 1 ? "TRUE" : "FALSE");        
+            printf("%s\n", B(i, j, Array) == 1 ? "True" : "False");        
             } else if (c == 'C') {
             scanf("%d", &i);
             scanf("%d", &j);

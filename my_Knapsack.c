@@ -53,7 +53,7 @@ int main() {
 
     // Print the selected items
     printf("Selected items:");
-    for (int i = size-1; i >=0; i--) {
+    for (int i = 0; i <size; i++) {
         if (selected_bool[i]) {
             printf(" %c", items[i]);
         }
