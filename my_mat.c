@@ -13,7 +13,6 @@ return b;
 void A(int Array[ROWS][COLS]) {
     for (int i = 0; i < ROWS; i++) {
         for (int j = 0; j < COLS; j++) {
-            printf("Enter weight for edge (%d, %d): ", i, j);
             scanf("%d", &Array[i][j]);
         }
     }
