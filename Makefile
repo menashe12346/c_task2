@@ -1,5 +1,5 @@
 cc = gcc
-FLAG = -Wall -g -fPIC
+FLAG = -Wall -g
 
 all: libclassgraph.a my_graph my_Knapsack
 
