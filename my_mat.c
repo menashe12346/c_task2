@@ -20,7 +20,12 @@ void A(int Array[ROWS][COLS]) {
     for (int k = 0; k < ROWS; k++) {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < ROWS; j++) {
-                Array[i][j] = min(Array[i][j], Array[i][k] + Array[k][j]);
+                if(Array[i][k]!=0 && Array[k][j]!=0){
+                    
+                int num = min(Array[i][j], Array[i][k] + Array[k][j]);
+                if(num != Array[i][j] || Array[i][j] == 0)
+                Array[i][j] == Array[i][k] + Array[k][j];
+                }
             }
         }
     }

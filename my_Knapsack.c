@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 #define weight 20
 #define size 5
@@ -37,8 +38,10 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
 int main() {
     int values[size];
     int weights[size];
+    char items[] = {'a', 'b', 'c', 'd', 'e'};
 
     for (int i = 0; i < 5; i++) {
+        scanf("%c", items[i]);
         scanf("%d", &values[i]);
         scanf("%d", &weights[i]);
     }
@@ -48,8 +51,6 @@ int main() {
     // Call the knapSack function
     int max_value = knapSack(weights, values, selected_bool);
     printf("Maximum profit: %d\n", max_value);
-
-    char items[] = {'a', 'b', 'c', 'd', 'e'};
 
     // Print the selected items
     printf("Selected items:");
