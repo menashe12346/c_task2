@@ -2,8 +2,8 @@
 #include "my_mat.h"
 #include <limits.h> // for INT_MAX
 
-#define ROWS 2
-#define COLS 2
+#define ROWS 10
+#define COLS 10
 #define INFINITY_VALUE INT_MAX
 
 int main() {
