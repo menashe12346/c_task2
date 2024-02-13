@@ -40,7 +40,7 @@ int main() {
     char items[] = {'a', 'b', 'c', 'd', 'e'};
 
     for (int i = 0; i < 5; i++) {
-        scanf("%c", items[i]);
+        scanf("%c", &items[i]);
         scanf("%d", &values[i]);
         scanf("%d", &weights[i]);
     }

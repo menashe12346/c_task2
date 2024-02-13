@@ -2,8 +2,8 @@
 #include "my_mat.h"
 #include <limits.h> // for INT_MAX
 
-#define ROWS 10
-#define COLS 10
+#define ROWS 2
+#define COLS 2
 #define INFINITY_VALUE INT_MAX
 
 int main() {
@@ -24,10 +24,10 @@ int main() {
         if (c == 'A') {
             A(Array);
         } else if (c == 'B') {
-            scanf(" %d %d ", &i, &j);
+            scanf("%d%d", &i, &j);
             printf("%s\n", B(i, j, Array)? "True" : "False");        
             } else if (c == 'C') {
-            scanf(" %d %d ", &i, &j);
+            scanf("%d%d", &i, &j);
             printf("%d\n", C(i, j, Array));
         }
     }
