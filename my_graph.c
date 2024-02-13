@@ -14,22 +14,27 @@ int main() {
             Array[i][j] = INFINITY_VALUE;
         }
     }
-    char c = ' ';
+    char c;
     int i;
     int j;
 
+    scanf("%c", &c); 
+
     while (c != 'D' && c != EOF) {
-        scanf("%c", &c); 
 
         if (c == 'A') {
             A(Array);
         } else if (c == 'B') {
-scanf(" %d %d ", &i, &j);
+            scanf("%d", &i);
+            scanf("%d", &j);            
             printf("%s\n", B(i, j, Array)? "True" : "False");        
             } else if (c == 'C') {
-scanf(" %d %d ", &i, &j);
+            scanf("%d", &i);
+            scanf("%d", &j);  
             printf("%d\n", C(i, j, Array));
         }
+
+        scanf("%c", &c); 
     }
 
     return 0;

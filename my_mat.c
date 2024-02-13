@@ -36,7 +36,7 @@ void A(int Array[ROWS][COLS]) {
 
 //check if there is a path
 int B(int row, int col, int Array[ROWS][COLS]) {
-    if(row >= 0 && row<=10 && col>=0 && col <=10){
+    if(row >= 0 && row<10 && col>=0 && col<10){
         return (Array[row][col] != INFINITY_VALUE && Array[row][col] != 0);
     }
     return 0;
@@ -44,7 +44,7 @@ int B(int row, int col, int Array[ROWS][COLS]) {
 
 //print the length of the path
 int C(int row, int col, int Array[ROWS][COLS]) {
-    if(row >= 0 && row<=10 && col>=0 && col <=10){
+    if(row >= 0 && row<10 && col>=0 && col<10){
         return (Array[row][col] == INFINITY_VALUE || Array[row][col] == 0) ? -1 : Array[row][col];
     }
     return -1;
