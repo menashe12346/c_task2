@@ -21,7 +21,7 @@ void A(int Array[ROWS][COLS]) {
             }
         }
     }
-
+    //make the shourtestPath array
     for (int k = 0; k < ROWS; k++) {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
@@ -33,10 +33,18 @@ void A(int Array[ROWS][COLS]) {
     }
 }
 
+//check if there is a path
 int B(int row, int col, int Array[ROWS][COLS]) {
-    return (Array[row][col] != INFINITY_VALUE);
+    if(row >= 0 && row<=10 && col>=0 && col <=10){
+        return (Array[row][col] != INFINITY_VALUE && Array[row][col] != 0);
+    }
+    return 0;
 }
 
+//print the length of the path
 int C(int row, int col, int Array[ROWS][COLS]) {
-    return (Array[row][col] == INFINITY_VALUE) ? -1 : Array[row][col];
+    if(row >= 0 && row<=10 && col>=0 && col <=10){
+        return (Array[row][col] == INFINITY_VALUE || Array[row][col] == 0) ? -1 : Array[row][col];
+    }
+    return -1;
 }

@@ -5,10 +5,9 @@
 #define size 5
 
 int knapSack(int weights[], int values[], int selected_bool[]) {
-    // Create a 2D array to store the maximum profit for each capacity
     int dp[size + 1][weight + 1];
 
-    // Initialize the DP table
+    // Initialize the DDinamic ProgremmingP array
     for (int i = 0; i <= size; i++) {
         for (int w = 0; w <= weight; w++) {
             if (i == 0 || w == 0) {
@@ -26,7 +25,7 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
     int w = weight;
     for (int i = size; i > 0 && w > 0; i--) {
         if (dp[i][w] != dp[i - 1][w]) {
-            selected_bool[i - 1] = 1; // Item is included
+            selected_bool[i - 1] = 1;
             w -= weights[i - 1];
         }
     }
