@@ -3,6 +3,7 @@
 
 #define weight 20
 #define size 5
+#define MaxStrLength 20 
 
 int knapSack(int weights[], int values[], int selected_bool[]) {
     int dp[size + 1][weight + 1];
@@ -35,14 +36,16 @@ int knapSack(int weights[], int values[], int selected_bool[]) {
 }
 
 int main() {
-    int values[size];
-    int weights[size];
-    char items[size];
+    char items[size][MaxStrLength + 1];
+    int values[size] = {0};
+    int weights[size] = {0};
 
-    for (int i = 0; i < size; i++) {
-        scanf(" %c", &items[i]);
-        scanf("%d", &values[i]);
-        scanf("%d", &weights[i]);
+    for(size_t i = 0; i < size; i++){
+        scanf("%s %d %d", items[i], &values[i], &weights[i]);
+
+        if(i < size - 1){
+            scanf(" ");
+        }
     }
 
     int selected_bool[size];
@@ -55,7 +58,7 @@ int main() {
     printf("Selected items:");
     for (int i = 0; i <size; i++) {
         if (selected_bool[i]) {
-            printf(" %c", items[i]);
+            printf(" %s", items[i]);
         }
     }
 
