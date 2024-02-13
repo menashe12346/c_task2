@@ -15,12 +15,13 @@ int min(int a, int b) {
 void A(int Array[ROWS][COLS]) {
     for (int i = 0; i < ROWS; i++) {
         for (int j = 0; j < COLS; j++) {
-            scanf("%d", &Array[i][j]);
+            scanf(" %d", &Array[i][j]);
             if (Array[i][j] == 0 && i != j) { 
                 Array[i][j] = INFINITY_VALUE;
             }
         }
     }
+                    scanf(" ");
     //make the shourtestPath array
     for (int k = 0; k < ROWS; k++) {
         for (int i = 0; i < ROWS; i++) {
