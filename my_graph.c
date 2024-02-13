@@ -24,12 +24,10 @@ int main() {
         if (c == 'A') {
             A(Array);
         } else if (c == 'B') {
-            scanf("%d", &i);
-            scanf("%d", &j);
+            scanf(" %d %d ", &i, &j);
             printf("%s\n", B(i, j, Array)? "True" : "False");        
             } else if (c == 'C') {
-            scanf("%d", &i);
-            scanf("%d", &j);
+            scanf(" %d %d ", &i, &j);
             printf("%d\n", C(i, j, Array));
         }
     }
